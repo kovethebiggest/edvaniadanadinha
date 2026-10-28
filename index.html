@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDVANIA + ANDRESSA SAFADINHAS SITE</title>
+<style>
+body {
+  margin: 0;
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(90deg, #ff1493, #800080);
+  padding: 35px 15px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  color: #ff69b4;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #ff1493;
+}
+
+.chat {
+  background: #222;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  max-width: 90%;
+}
+
+button {
+  background: #ff1493;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.mensagem {
+  background: #333;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>EDVANIA + ANDRESSA SAFADINHAS SITE 💗</h1>
+  <p>Bem-vindos ao nosso futuro Privacy!</p>
+</header>
+
+<h2>📸 Nossas fotinhas</h2>
+
+<div class="galeria">
+  
+<img src="fotos/foto1.png.webp" alt="Primeira foto">
+<img src="fotos/foto2.png.webp" alt="Segunda foto">
+
+</div>
+
+<div class="chat">
+  <h2>💬 Chat Público</h2>
+  <p>Somos danadinhas podem falar!</p>
+
+  <div id="mensagens"></div>
+
+  <input id="texto" maxlength="300"
+  placeholder="Digite sua mensagem...">
+
+  <button onclick="enviar()">Enviar 💗</button>
+</div>
+
+<script>
+function enviar() {
+  const campo = document.getElementById("texto");
+  const texto = campo.value.trim();
+
+  if (!texto) return;
+
+  const mensagem = document.createElement("div");
+  mensagem.className = "mensagem";
+  mensagem.textContent = "👤 Anônimo: " + texto;
+
+  document.getElementById("mensagens").appendChild(mensagem);
+  campo.value = "";
+}
+</script>
+
+</body>
+</html>
