@@ -91,7 +91,7 @@ button:disabled {
 
 <header>
   <h1>EDVANIA + ANDRESSA SAFADINHAS SITE 💗</h1>
-  <p>Bem-vindos ao nosso site!</p>
+  <p>Bem-vindos ao nosso site somos putinhas!</p>
 </header>
 
 <h2>📸 Nossas fotinhas</h2>
@@ -102,8 +102,8 @@ button:disabled {
 </div>
 
 <div class="chat">
-  <h2>💬 Chat Público</h2>
-  <p>Deixe seu comentário!</p>
+  <h2> :3 Chat Público</h2>
+  <p>Deixe seu comentário gostosinhos!</p>
 
   <p id="status">Conectando...</p>
 
@@ -117,7 +117,7 @@ button:disabled {
       required
     >
     <button id="botao" type="submit">
-      Enviar 💗
+      Enviar  💗
     </button>
   </form>
 </div>
@@ -174,10 +174,10 @@ onSnapshot(consulta, (snapshot) => {
     lista.appendChild(mensagem);
   });
 
-  status.textContent = "🟢 Chat conectado";
+  status.textContent = " Chat conectado";
   lista.scrollTop = lista.scrollHeight;
 }, (erro) => {
-  status.textContent = "❌ Erro ao carregar mensagens";
+  status.textContent = " Erro ao carregar mensagens";
   console.error(erro);
 });
 
@@ -197,9 +197,9 @@ formulario.addEventListener("submit", async (evento) => {
     });
 
     campo.value = "";
-    status.textContent = "🟢 Mensagem enviada!";
+    status.textContent = " Mensagem enviada!";
   } catch (erro) {
-    status.textContent = "❌ Erro ao enviar mensagem";
+    status.textContent = " Erro ao enviar mensagem";
     console.error(erro);
   } finally {
     botao.disabled = false;
